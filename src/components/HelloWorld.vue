@@ -1,58 +1,218 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    <div class="herovideo parallax">
+      <img
+        class="heroimg"
+        src="../assets/black.png"
+        style="visibility: hidden"
+      />
+      <video id="video" autoplay muted loop v-rellax="{ speed: 4 }">
+        <source
+          src="../assets/Rondini Studio - Demoreel - v2.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div class="overlay">
+        <div class="">
+          <div class="my-auto col-md-4 text-center" v-rellax="{ speed: 4 }">
+            <h1>Bem vindo ao<br /><b>Rondini Studio</b></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="parabody">
+    <div class="hero amsterdam parallax" v-rellax="{ speed: 2, center: true}">
+      <div class="page-container">
+        <h2>AQUI É BLACKWAII!</h2>
+      </div>
+      <div class="w-100 row h-100">
+        <div class="my-auto">
+          <h1
+            class="d-flex justify-content-end"
+            v-rellax="{ speed: 6, center: true }"
+          >
+            Bem vindo ao Rondini Studio!
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="parabody">
+      <div class="hero paris parallax" v-rellax="{ speed: 2, center: true}"></div>
+    </div >
+        <div class="parabody">
+      <div class="hero london parallax" v-rellax="{ speed: 2, center: true}"></div>
+    </div>
+        <div class="parabody">
+      <div class="hero amsterdam parallax" v-rellax="{ speed: 2, center: true}"></div>
+    </div>
+    
+
+
+
+
+    <div class="page-container">
+      <h2>Venice</h2>
+
+      <p>
+        Venice is a city in northeastern Italy and the capital of the Veneto
+        region. It is situated on a group of 118 small islands that are
+        separated by canals and linked by over 400 bridges.
+      </p>
+      <p>
+        Venice has been known as "La Dominante", "La Serenissima", "Queen of the
+        Adriatic", "City of Water", "City of Masks", "City of Bridges", "The
+        Floating City", and "City of Canals". The lagoon and a part of the city
+        are listed as a UNESCO World Heritage Site. Parts of Venice are renowned
+        for the beauty of their settings, their architecture, and artwork.
+      </p>
+    
+    
+    </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: "HelloWorld",
   props: {
-    msg: String
-  }
-}
+    msg: String,
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
+<style>
+@font-face {
+  font-family: "gotham-bold";
+  src: url("../font/gotham-bold.otf") format("otf");
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+h1 {
+  color: white;
+  /* font-size: 350% !important; */
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+
+.overlay {
+  width: 100%;
+  position: absolute;
 }
-a {
-  color: #42b983;
+
+.heroimg {
+  width: 100%;
+  z-index: -2;
+}
+
+.herovideo {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+@media screen and (orientation:portrait) {
+    video {
+      width: auto !important;
+      height: 100%;
+    }
+}
+video {
+  top: 0;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+.parabody {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.paraimg{
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+div {
+  font-family: "gotham-bold";
+}
+p {
+  font-family: "gotham-bold";
+}
+
+body {
+  padding-bottom: 50px;
+  background-color: white;
+}
+.page-container {
+  align-self: flex-start;
+  padding: 10vh 0vw;
+  width: 100%;
+  background-color: white;
+}
+
+.parallax {
+  background-attachment: fixed;
+}
+
+.hero {
+  margin-top: -15vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: auto;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.london {
+  background-image: url("../assets/hi.jpg");
+}
+
+.amsterdam {
+  background-image: url("../assets/cook.jpg");
+}
+
+.paris {
+  background-image: url("../assets/speed.jpg");
+}
+.porto {
+  background-image: url("../assets/astro.jpg");
+}
+
+.madrid {
+  background-image: url("../assets/pet.jpg");
+}
+
+.berlin {
+  background-image: url("../assets/pet.jpg");
+}
+
+.veneza {
+  background-image: url("../assets/pet.jpg");
+}
+
+.page-container h2 {
+  text-transform: uppercase;
+
+  margin: 0 0 20px 0;
+  color: #222222;
+}
+
+.page-container p {
+  letter-spacing: 0.5px;
+  line-height: 26px;
+
+  margin: auto;
+  color: #222222;
+}
+
+.page-container p:not(:last-of-type) {
+  margin-bottom: 24px;
 }
 </style>
