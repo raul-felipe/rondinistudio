@@ -20,7 +20,7 @@
     </div>
     <div class="parabody">
       <div
-        class="hero amsterdam parallax"
+        class="hero z3 parallax"
         v-rellax="{ speed: 2, center: true }"
       >
         <div class="page-container">
@@ -40,19 +40,19 @@
 
       <div class="parabody">
         <div
-          class="hero paris parallax"
+          class="hero z1 parallax"
           v-rellax="{ speed: 2, center: true }"
         ></div>
       </div>
       <div class="parabody">
         <div
-          class="hero london parallax"
+          class="hero z2 parallax"
           v-rellax="{ speed: 2, center: true }"
         ></div>
       </div>
       <div class="parabody">
         <div
-          class="hero amsterdam parallax"
+          class="hero z3 parallax"
           v-rellax="{ speed: 2, center: true }"
         ></div>
       </div>
@@ -96,6 +96,7 @@
 
 h1 {
   color: white;
+  text-shadow: black 0.1em 0.1em 0.2em
   /* font-size: 350% !important; */
 }
 
@@ -186,49 +187,17 @@ body {
   position: relative;
 }
 
-.london {
-  background-image: url("../assets/hi.jpg");
+.z1 {
+  background-image: url("../assets/z1.png");
 }
 
-.amsterdam {
-  background-image: url("../assets/cook.jpg");
+.z2 {
+  background-image: url("../assets/z2.png");
 }
 
-.paris {
-  background-image: url("../assets/speed.jpg");
-}
-.porto {
-  background-image: url("../assets/astro.jpg");
+.z3 {
+  background-image: url("../assets/z3.png");
 }
 
-.madrid {
-  background-image: url("../assets/pet.jpg");
-}
 
-.berlin {
-  background-image: url("../assets/pet.jpg");
-}
-
-.veneza {
-  background-image: url("../assets/pet.jpg");
-}
-
-.page-container h2 {
-  text-transform: uppercase;
-
-  margin: 0 0 20px 0;
-  color: #222222;
-}
-
-.page-container p {
-  letter-spacing: 0.5px;
-  line-height: 26px;
-
-  margin: auto;
-  color: #222222;
-}
-
-.page-container p:not(:last-of-type) {
-  margin-bottom: 24px;
-}
 </style>
