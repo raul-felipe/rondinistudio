@@ -15,13 +15,14 @@
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto col-sm-6 justify-content-end" right>
 
-        <b-navbar-brand href="https://www.instagram.com/rondini.studio/" target="_blank" >
-            <img src="../assets/instagram.png" width="40" height="40">
+        <b-navbar-brand href="https://www.behance.net/rondinistudio" target="_blank" >
+            <img src="../assets/behance.png" width="35" height="35" >
         </b-navbar-brand>
 
-        <b-navbar-brand href="https://www.behance.net/rondinistudio" target="_blank" >
-            <img src="../assets/behance.png" width="40" height="40" >
+        <b-navbar-brand href="https://www.instagram.com/rondini.studio/" target="_blank" >
+            <img src="../assets/instagram.png" width="35" height="35">
         </b-navbar-brand>
+
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
